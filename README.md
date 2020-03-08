@@ -1,1 +1,1 @@
-MolAICal: https://molaical.github.io/index.html
+More detail about MolAICal, please goto: https://molaical.github.io/index.html
