@@ -38,11 +38,11 @@ a img { /* 此选择器将删除某些浏览器中显示在图像周围的默认
 /* ~~ 站点链接的样式必须保持此顺序，包括用于创建悬停效果的选择器组在内。 ~~ */
 a:link {
 	color: #42413C;
-	text-decoration: underline; /* 除非将链接设置成极为独特的外观样式，否则最好提供下划线，以便可从视觉上快速识别 */
+	text-decoration: none; /* 除非将链接设置成极为独特的外观样式，否则最好提供下划线，以便可从视觉上快速识别 */
 }
 a:visited {
 	color: #6E6C64;
-	text-decoration: underline;
+	text-decoration: none;
 }
 a:hover, a:active, a:focus { /* 此组选择器将为键盘导航者提供与鼠标使用者相同的悬停体验。 */
 	text-decoration: none;
@@ -92,6 +92,12 @@ a:hover, a:active, a:focus { /* 此组选择器将为键盘导航者提供与鼠
 	font-size: 1px;
 	line-height: 0px;
 }
+a:hover {
+	text-decoration: underline;
+}
+a:active {
+	text-decoration: none;
+}
 -->
 </style></head>
 
@@ -100,7 +106,7 @@ a:hover, a:active, a:focus { /* 此组选择器将为键盘导航者提供与鼠
 <div class="container">
   <div class="header"><!-- end .header --></div>
   <div class="content">
-    <p><strong>中文教程</strong></p>
+    <p><strong>中文教程</strong> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong><a href="https://molaical.github.io">返回主页</a></strong></p>
     <p> MolAICal QQ学术讨论群：<strong> 1151656349</strong></p>
     <p>1. <a href="cnblog/000/000-quickStart.html">使用MolAICal快速进行从头药物设计</a></p>
     <p>2. <a href="cnblog/001-AIGrow.pdf">使用MolAICal的深度学习模型和经典算法程序进行GCGR的从头药物设计</a></p>

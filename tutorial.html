@@ -38,11 +38,11 @@ a img { /* 此选择器将删除某些浏览器中显示在图像周围的默认
 /* ~~ 站点链接的样式必须保持此顺序，包括用于创建悬停效果的选择器组在内。 ~~ */
 a:link {
 	color: #42413C;
-	text-decoration: underline; /* 除非将链接设置成极为独特的外观样式，否则最好提供下划线，以便可从视觉上快速识别 */
+	text-decoration: none; /* 除非将链接设置成极为独特的外观样式，否则最好提供下划线，以便可从视觉上快速识别 */
 }
 a:visited {
 	color: #6E6C64;
-	text-decoration: underline;
+	text-decoration: none;
 }
 a:hover, a:active, a:focus { /* 此组选择器将为键盘导航者提供与鼠标使用者相同的悬停体验。 */
 	text-decoration: none;
@@ -92,6 +92,12 @@ a:hover, a:active, a:focus { /* 此组选择器将为键盘导航者提供与鼠
 	font-size: 1px;
 	line-height: 0px;
 }
+a:hover {
+	text-decoration: underline;
+}
+a:active {
+	text-decoration: none;
+}
 -->
 </style></head>
 
@@ -121,6 +127,8 @@ a:hover, a:active, a:focus { /* 此组选择器将为键盘导航者提供与鼠
     <p>(1) An example of packaging deep learning model &quot;AIGenMols&quot; for MolAICal. Instructions: <a href="https://github.com/MolAICal/documents/raw/master/tutorials/012-AIGenMols/AIGenMols_install.pdf"><strong>pdf file</strong></a>, materials: <strong><a href="https://github.com/MolAICal/specialtopic/tree/master/012-AIGenMols">files</a></strong></p>
     <p>&nbsp;</p>
     <p><strong>Notice:</strong> All the tutorials Instructions and materials are in Github. If Github breaks down, all the files can be downloaded from: <a href="https://lzueducn-my.sharepoint.com/:f:/g/personal/baiqf08_lzu_edu_cn/EksNYGA70tpPoBBwIxNif9YB7CdjSrIKiSynMm5C-Gfrew?e=LnHXeR">All_files</a>;  but the relative files in this resource site update slower than in Github.</p>
+    <p>&nbsp;</p>
+    <p><a href="https://molaical.github.io"><strong>&gt;&gt; Back Home</strong></a></p>
   </div>
   <div class="footer"><!-- end .footer --></div>
   <!-- end .container --></div>

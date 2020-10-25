@@ -38,11 +38,11 @@ a img { /* 此选择器将删除某些浏览器中显示在图像周围的默认
 /* ~~ 站点链接的样式必须保持此顺序，包括用于创建悬停效果的选择器组在内。 ~~ */
 a:link {
 	color: #42413C;
-	text-decoration: underline; /* 除非将链接设置成极为独特的外观样式，否则最好提供下划线，以便可从视觉上快速识别 */
+	text-decoration: none; /* 除非将链接设置成极为独特的外观样式，否则最好提供下划线，以便可从视觉上快速识别 */
 }
 a:visited {
 	color: #6E6C64;
-	text-decoration: underline;
+	text-decoration: none;
 }
 a:hover, a:active, a:focus { /* 此组选择器将为键盘导航者提供与鼠标使用者相同的悬停体验。 */
 	text-decoration: none;
@@ -92,6 +92,12 @@ a:hover, a:active, a:focus { /* 此组选择器将为键盘导航者提供与鼠
 	font-size: 1px;
 	line-height: 0px;
 }
+a:hover {
+	text-decoration: underline;
+}
+a:active {
+	text-decoration: none;
+}
 -->
 </style></head>
 
@@ -135,6 +141,8 @@ The &ldquo;receptorPDB&rdquo; is set to the PDB format  structure of SARS-CoV-2 
     <p><strong>References</strong></p>
 <p>[1]  Jin, Z. et al. Structure of Mpro from COVID-19 virus and discovery of its inhibitors. <em>Nature</em> (2020).<br />
     [2]  Zhang, L.<em> et al.</em> Crystal structure of SARS-CoV-2  main protease provides a basis for design of improved alpha-ketoamide  inhibitors. <em>Science</em> (2020).</p>
+<p>&nbsp;</p>
+<p><a href="https://molaical.github.io"><strong>&gt;&gt; Back Home</strong></a></p>
 <!-- end .content --></div>
   <div class="footer"><!-- end .footer --></div>
   <!-- end .container --></div>
