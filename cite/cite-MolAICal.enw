@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ﻿%0 Journal Article
 %A Bai, Qifeng
 %D 2020
@@ -8,3 +9,15 @@
 
 
 
+=======
+﻿%0 Journal Article
+%A Bai, Qifeng
+%D 2020
+%T Research and development of MolAICal for drug design via deep learning and classical programming
+%B arXiv preprint arXiv:2006.09747
+%! Research and development of MolAICal for drug design via deep learning and classical programming
+%U https://arxiv.org/abs/2006.09747
+
+
+
+>>>>>>> 912a7fdbb2de19e4427d9935d14c08d48d4bcc7c
