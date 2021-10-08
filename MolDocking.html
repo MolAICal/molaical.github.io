@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <!-- TemplateBeginEditable name="doctitle" -->
-<title>De novo drug design tutorial</title>
+<title>Molecular docking tutorial</title>
 <!-- TemplateEndEditable -->
 <!-- TemplateBeginEditable name="head" -->
 <!-- TemplateEndEditable -->
@@ -106,42 +106,13 @@ a:active {
 <div class="container">
   <div class="header"><!-- end .header --></div>
   <div class="content">
-    <h1>Quick start tutorial -- De novo drug design</h1>
+    <h1>Molecular docking by MolAICal</h1>
     <p><strong>Author: </strong>Qifeng Bai</p>
-    <p>SARS-CoV-2  caused the rapid spread of coronavirus disease 2019 (COVID-19)  throughout the world. In this tutorial, the SARS-CoV-2 main protease (Mpro)  which  plays an important role on the replication of coronavirus is selected as the example target. The crystal structures  of SARS-CoV-2 Mpro have been reported (PDB ID: 6LU7, 6Y2F, etc) [1,2]. Here,  the built structure of SARS-CoV-2 Mpro provided by the group of  Prof. Zihe Rao is selected as our quick start example (see Figure 1). Here, MolAICal (<a href="https://doi.org/10.1093/bib/bbaa161">https://doi.org/10.1093/bib/bbaa161</a>)  is employed for this tutorial. </p>
-    <p><br />
-      <img src="figure/fig2.jpg" alt="Figure 1" width="554" height="304" />   <br />
-    <strong>Figure  1. </strong>The structure of SARS-CoV-2 Mpro.</p>
-    <h2>Materials</h2>
-    <p><a name="_Toc30445728" id="_Toc30445728"><strong>1. Software requirement</strong></a><strong> </strong><br />
-      1)  MolAICal: <a href="https://molaical.github.io">https://molaical.github.io</a><br />
-      2)  UCSF Chimera: <a href="https://www.cgl.ucsf.edu/chimera/">https://www.cgl.ucsf.edu/chimera/</a><br />
-      Make  sure every software is installed rightly. <br />
-    </p>
-    <p><strong>2. Example files</strong><br />
-      All  the necessary tutorial files are downloaded from: <a href="https://github.com/MolAICal/tutorials/tree/master/000-quickStart"><strong>QuickStart</strong></a></p>
-    <h2>Procedure</h2>
-    <p>1. Open &ldquo;InputParFile.dat&rdquo; file, it needs to  modify four parameters for this tutorial:<br />
-------------------------------------------------------------------------------------------<br />
-receptorPDB                          mproNolig.pdb<br />
-startFragFile                          startFrag.mol2<br />
-centerPoints                          -10.733 12.416 68.829 <br />
-boxLengthXYZ                      &nbsp;30.0 30.0 30.0<br />
--------------------------------------------------------------------------------------------<br />
-The &ldquo;receptorPDB&rdquo; is set to the PDB format  structure of SARS-CoV-2 Mpro­ without ligand. The &ldquo;startFragFile&rdquo;  is set to the initial fragment. The &ldquo;centerPoints&rdquo; and &ldquo;boxLengthXYZ&rdquo; represent  the box center and length, respectively.</p>
-    <p>2. Download and open tutorial folder &ldquo;000-quickStart&rdquo;,  then run command as below:<br />
-    </p>
-    <p>#&gt; molaical.exe -denovo grow -i  InputParFile.dat</p>
-    <h2>Results</h2>
-    <p>      The results are stored in the folder named  &ldquo;001-AIGrow/results&rdquo;. The &ldquo;AstatisticsFile.dat&rdquo; records the information of designed  ligands that contain ID, Name, Cluster, Affinity, Formula, InChIKey. The results are just a simple demo  example that does not contain complete running results. The complete   results can be  obtained by finishing this task. <br />
-      Open  crystal ligand N3 named &ldquo;ligand.mol2&rdquo; of SARS-CoV-2 Mpro and  generated ligand named &ldquo;lig_11.mol2&rdquo; (see Figure 2):<br />
-  <img src="figure/fig3.jpg" alt="Figure 2" width="468" height="364" /> <br />
-  <strong>Figure  2. </strong>The results of generated ligand (white) and inhibitor N3 (red) of SARS-CoV-2  Mpro.</p>
-    <p>The detailed tutorial can be referred in the  first tutorial of &ldquo;<a href="https://github.com/MolAICal/documents/raw/master/tutorials/001-AIGrow/AI_De_novo_drug_design_tutorial.pdf">1. Drug design tutorials of MolAICal</a>&rdquo; in <a href="https://molaical.github.io/">https://molaical.github.io/</a></p>
-    <p>&nbsp;</p>
-    <p><strong>References</strong></p>
-<p>[1]  Jin, Z. et al. Structure of Mpro from COVID-19 virus and discovery of its inhibitors. <em>Nature</em> (2020).<br />
-    [2]  Zhang, L.<em> et al.</em> Crystal structure of SARS-CoV-2  main protease provides a basis for design of improved alpha-ketoamide  inhibitors. <em>Science</em> (2020).</p>
+    <p>If you cannot see the below content, you can download this tutorial in PDF format:<a href="https://github.com/MolAICal/documents/raw/master/tutorials/0000-docking/molecular_docking.pdf"> <strong>download</strong></a></p>
+    <embed src="enblog/molecular_docking.pdf" type="application/pdf" style="width: 960px; height: 850px;">
+    </embed>
+    
+<p></p>
 <p>&nbsp;</p>
 <p><a href="https://molaical.github.io"><strong>&gt;&gt; Back Home</strong></a></p>
 <!-- end .content --></div>
