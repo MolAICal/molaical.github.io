@@ -108,18 +108,21 @@ a:active {
   <div class="content">
     <h1>FAQ</h1>
     <p><strong>1. Does MolAICal have GUI for running?</strong></p>
-    <p>In the current version, MolAICal is mainly run by the command line. In the future, the GUI of MolAICal may be developed. </p>
-    <p><strong>2. I cannot open Github or download tutorial files and documents from Github. How do I solve it?</strong></p>
-    <p>If you are chinese user, please go to: <a href="http://molaical.gitee.io">http://molaical.gitee.io</a></p>
-    <p><strong>or</strong> you can use the software “Complete Internet Repair” to repair it once Github cannot be open. See below figure, and click button &quot;Go!&quot;</p>
-    <p><img src="figure/CIR.png" width="486" height="674" /><br />
-      <br />
-    </p>
-    <p><br />
-  </p>
+    <p>In the current version, MolAICal is mainly run by the command line. In the future, the GUI of MolAICal may be developed.</p>
+    <p><strong>2. When do molecular growth in MS-DOS or PowerShell console by command: &quot;molaical.exe -denovo grow -i InputParFile.dat&quot;, it shows some errors below &quot;Now read generated Grid......&quot; </strong>(see below figure)</p>
+    <p><img src="other/f1.jpg" width="662" height="346" /></p>
+    <p>Please check this issue: <a href="https://github.com/MolAICal/molaical.github.io/issues/4">https://github.com/MolAICal/molaical.github.io/issues/4. </a>The main reason is that molecular growth part of MolAICal is developed based on UTF-8 encoding (chcp 65001) and users' MS-DOS or PowerShell console  does not use the supported <strong>code page</strong> such as 936, 65001, etc.  Users can input the  below command to change code page in MS-DOS：</p>
+    <p style="color:#0000FF;">#&gt; chcp 65001</p>
+    <p>For more detail about code page, please  check <a href="https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/chcp"><strong>code page</strong></a></p>
+    <p>Besides, in Linux operating system, it maybe show such similar problems, so please employ the right code page in Linux terminal console. Use below command to check the current character encoding in terminal console:</p>
+    <p style="color:#0000FF;">#&gt; locale charmap</p>
+    <p> If users want to modify character encoding, they can edit .bashrc by adding the following lines:</p>
+    <p style="color:#0000FF;">export LC_ALL=en_US.UTF-8<br />
+      export LANG=en_US.UTF-8<br />
+      export LANGUAGE=en_US.UTF-8</p>
+    <p style="color:#0000FF;">&nbsp;</p>
+    <p style="color:#0000FF;">&nbsp; </p>
     <p>&nbsp;</p>
-    <p></p>
-<p>&nbsp;</p>
 <p>&nbsp;</p>
     <p><a href="https://molaical.github.io"></a></p>
     <p>&nbsp;</p>
