@@ -141,8 +141,8 @@ to perform a background installation.</p>
     <p>To use MolAICal expediently, users can set system path of MolAICal. So the command molaical.exe can be used without given path.</p>
     <p><!-- end .content --><strong>Notice: </strong> MolAICal only provides Windows and Linux 64-bit versions. Users should not change the name or path of MolAICal after install is complete in Linux System. If users <strong>change the name or path</strong> of MolAICal, please <strong>re-install MolAICal</strong> again.</p>
 <p>Since the Linux version of MolAICal  launches a persistent container that runs continuously, users can <strong>remove, uninstall or stop</strong> this  container of <strong>MolAICal</strong> using the  following commands:<br />
-  #&gt; molaical.exe -eset sys  rmi molaical:v9 <br />
-  #&gt; molaical.exe -eset sys  rm molaical</p>
+  #&gt; molaical.exe -eset sys rm molaical<br />
+  #&gt; molaical.exe -eset sys rmi molaical:v9</p>
 <p><strong>Possible  install issues (option):</strong><br />
   If MolAICal images and containers have  already been loaded previously, MolAICal will first remove these images and  containers. If similar errors occur as below:<br />
   <em style="color:#F00">rm: cannot remove  '630b0b26-296e-3f17-a1b7-e4effdf77bba/ROOT/usr/bin': Directory not empty</em><br />
