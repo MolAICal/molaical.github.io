@@ -129,14 +129,33 @@ a:active {
     <p style="color:#00F">2) cd MolAICal-linux64-xxx<br />
       3) chmod +x install.sh<br />
     4) ./install.sh</p>
+    <p><strong>Note</strong>: installing MolAICal on a Linux system requires starting (or removing and starting) a container and image, which is relatively time-consuming—please be patient. If the user wishes to install MolAICal in the background or has a limited terminal session time, they can use the command:<br />
+./install.sh &gt;&amp; log &amp;<br />
+to perform a background installation.</p>
     <p>At last, users can run the blow example command in Linux terminal console (Users should modify it according to the actual path of molaical.exe):</p>
     <p style="color:#00F">      #&gt; /home/fly/bai/MolAICal-linux64/molaical.exe</p>
     <p>Press <strong>Enter</strong> Key, it should show similar message as follows:<br />
     <img src="figure/linuxConsole.png" width="864" height="288" /></p>
-    <p>Until now, install and test are complete. <br />
+    <p><strong>Until now, installation and testing are complete.  </strong><br />
     </p>
     <p>To use MolAICal expediently, users can set system path of MolAICal. So the command molaical.exe can be used without given path.</p>
     <p><!-- end .content --><strong>Notice: </strong> MolAICal only provides Windows and Linux 64-bit versions. Users should not change the name or path of MolAICal after install is complete in Linux System. If users <strong>change the name or path</strong> of MolAICal, please <strong>re-install MolAICal</strong> again.</p>
+<p>Since the Linux version of MolAICal  launches a persistent container that runs continuously, users can <strong>remove, uninstall or stop</strong> this  container of <strong>MolAICal</strong> using the  following commands:<br />
+  #&gt; molaical.exe -eset sys  rmi molaical:v9 <br />
+  #&gt; molaical.exe -eset sys  rm molaical</p>
+<p><strong>Possible  install issues (option):</strong><br />
+  If MolAICal images and containers have  already been loaded previously, MolAICal will first remove these images and  containers. If similar errors occur as below:<br />
+  <em style="color:#F00">rm: cannot remove  '630b0b26-296e-3f17-a1b7-e4effdf77bba/ROOT/usr/bin': Directory not empty</em><br />
+  the following command can be executed to  forcefully remove the container:<br />
+  1)  Enter  P1 mode:<br />
+  <strong>usage:</strong> molaical.exe -eset sys  setup --execmode=P1 containerIDNAME<br />
+  e.g.,<br />
+  #&gt; molaical.exe -eset sys  setup --execmode=P1 molaical<br />
+  or<br />
+  #&gt; molaical.exe -eset sys  setup --execmode=P1 30754628-67fe-3109-bfd3-00a830163ee5<br />
+  And then:<br />
+  #&gt; cd  ~/.udocker/containers/<br />
+  #&gt; rm -rf &lt;container folder&gt;</p>
 <p>&nbsp;</p>
 <p><strong>Useful website Links:</strong></p>
     <p>MolAICal is designed based on OpenJDK. We collect the websites for downloading OpenJDK:</p>
