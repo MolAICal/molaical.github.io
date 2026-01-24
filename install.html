@@ -136,14 +136,15 @@ to perform a background installation.</p>
     <p style="color:#00F">      #&gt; /home/fly/bai/MolAICal-linux64/molaical.exe</p>
     <p>Press <strong>Enter</strong> Key, it should show similar message as follows:<br />
     <img src="figure/linuxConsole.png" width="864" height="288" /></p>
-    <p><strong>Until now, installation and testing are complete.  </strong><br />
-    </p>
-    <p>To use MolAICal expediently, users can set system path of MolAICal. So the command molaical.exe can be used without given path.</p>
+    <p><strong>Until now, installation and testing are complete.  </strong></p>
+    <p>&nbsp;</p>
+     <hr />
+    <p>1) To use MolAICal expediently, users can set system path of MolAICal. So the command molaical.exe can be used without given path.</p>
     <p><!-- end .content --><strong>Notice: </strong> MolAICal only provides Windows and Linux 64-bit versions. Users should not change the name or path of MolAICal after install is complete in Linux System. If users <strong>change the name or path</strong> of MolAICal, please <strong>re-install MolAICal</strong> again.</p>
-<p>Since the Linux version of MolAICal  launches a persistent container that runs continuously, users can <strong>remove, uninstall or stop</strong> this  container of <strong>MolAICal</strong> using the  following commands:<br />
+<p>2) Since the Linux version of MolAICal  launches a persistent container that runs continuously, users can <strong>remove, uninstall or stop</strong> this  container of <strong>MolAICal</strong> using the  following commands:<br />
   #&gt; molaical.exe -eset sys rm molaical<br />
   #&gt; molaical.exe -eset sys rmi molaical:v9</p>
-<p><strong>Possible  install issues (option):</strong><br />
+<p><strong>3) Possible  install issues (option):</strong><br />
   If MolAICal images and containers have  already been loaded previously, MolAICal will first remove these images and  containers. If similar errors occur as below:<br />
   <em style="color:#F00">rm: cannot remove  '630b0b26-296e-3f17-a1b7-e4effdf77bba/ROOT/usr/bin': Directory not empty</em><br />
   the following command can be executed to  forcefully remove the container:<br />
@@ -156,8 +157,21 @@ to perform a background installation.</p>
   And then:<br />
   #&gt; cd  ~/.udocker/containers/<br />
   #&gt; rm -rf &lt;container folder&gt;</p>
-<p>&nbsp;</p>
-<p><strong>Useful website Links:</strong></p>
+<p><strong>4) Linux Version of MolAICal: Architecture and Acceleration</strong></p>
+<p>As  shown in the below Figure, <strong>containers</strong> can  not only utilize the container system's files and programs but also access the  host machine's library files through mounting and mapping mechanisms. This  effectively <strong>resolves</strong> issues such as <strong>library conflicts</strong> or missing  dependencies. However,<strong> program execution  within containers may indeed be slower than on the local machine.</strong></p>
+<p>The below Figure   demonstrates that due to the mapping relationship, the computational  commands executed by &quot;<strong>molalcal.exe&quot;</strong> in the container are <strong>identical</strong> to  those run by &quot;<strong>molaical.exe</strong>&quot;  on the local machine. </p>
+<p><img src="figure/fig4.png" width="725" height="289" /></p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Architecture Diagram for the Linux Version of MolAICal</p>
+<p>Therefore, for tasks with minimal library dependencies—such as virtual screening using MolAICal—consider copying MolAICal from the container to the local machine:</p>
+<p>a).  Go to the container file system, it will enter  the &quot;/root&quot;<br />
+#&gt; molaical.exe  -eset shell in</p>
+<p>b).  The first part of 'cp' is from the MolAICal container,  and the second part is in the local machine<br />
+  #&gt; cp -r soft/MolAICal-linux64  &lt;local machine directory&gt;/</p>
+<p>c).  Exit container file system<br />
+#&gt; exit</p>
+<p>At last, performing virtual screening locally via the same methodology can significantly accelerate the screening process.<br />
+</p>
+<p><strong>5) Useful website Links:</strong></p>
     <p>MolAICal is designed based on OpenJDK. We collect the websites for downloading OpenJDK:</p>
     <p>1. <a href="https://openjdk.java.net/">https://openjdk.java.net/</a><br />
     2. <a href="https://adoptopenjdk.net/">https://adoptopenjdk.net/</a><br />
