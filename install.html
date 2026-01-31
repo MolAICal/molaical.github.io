@@ -162,7 +162,7 @@ to perform a background installation.</p>
 <p>The below Figure   demonstrates that due to the mapping relationship, the computational  commands executed by &quot;<strong>molalcal.exe&quot;</strong> in the container are <strong>identical</strong> to  those run by &quot;<strong>molaical.exe</strong>&quot;  on the local machine. </p>
 <p><img src="figure/fig4.png" width="725" height="289" /></p>
 <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Architecture Diagram for the Linux Version of MolAICal</p>
-<p>Therefore, for tasks with minimal library dependencies—such as virtual screening using MolAICal—consider copying MolAICal from the container to the local machine:</p>
+<p>Therefore, to improve the running speed, for tasks with minimal library dependencies—such as virtual screening using MolAICal—consider copying MolAICal from the container to the local machine:</p>
 <p>a).  Go to the container file system, it will enter  the &quot;/root&quot;<br />
 #&gt; molaical.exe  -eset shell in</p>
 <p>b).  The first part of 'cp' is from the MolAICal container,  and the second part is in the local machine<br />
