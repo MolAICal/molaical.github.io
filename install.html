@@ -163,14 +163,23 @@ to perform a background installation.</p>
 <p><img src="figure/fig4.png" width="725" height="289" /></p>
 <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Architecture Diagram for the Linux Version of MolAICal</p>
 <p>Therefore, to improve the running speed, for tasks with minimal library dependencies—such as virtual screening using MolAICal—consider copying MolAICal from the container to the local machine:</p>
-<p>a).  Go to the container file system, it will enter  the &quot;/root&quot;<br />
+<p>a)  Go to the container file system, it will enter  the &quot;/root&quot;<br />
 #&gt; molaical.exe  -eset shell in</p>
-<p>b).  The first part of 'cp' is from the MolAICal container,  and the second part is in the local machine<br />
+<p>b)  The first part of 'cp' is from the MolAICal container,  and the second part is in the local machine<br />
   #&gt; cp -r soft/MolAICal-linux64  &lt;local machine directory&gt;/</p>
-<p>c).  Exit container file system<br />
+<p>c)  Exit container file system<br />
 #&gt; exit</p>
-<p>At last, performing virtual screening locally via the same methodology can significantly accelerate the screening process.<br />
-</p>
+<p>At last, performing virtual screening locally via the same methodology can significantly accelerate the screening process.</p>
+<p><strong>Note:</strong> The container for the Linux version of MolAICal runs a minimal Ubuntu system. If library files are missing, such as in this error:<br />
+  <em>&quot;/root/soft/vmd-2.0.0a8/lib/vmd/vmd_LINUXAMD64: error while loading shared libraries: libXcursor.so.1: cannot open shared object file: No such file or directory<br />
+Process completed successfully with exit code: 0</em>&quot;</p>
+<p><strong>Solution:</strong><br />
+  a) Access the MolAICal container directly:<br />
+  #&gt; molaical.exe -eset sys run molaical<br />
+  b) Install the missing library:<br />
+  #&gt; apt update<br />
+  #&gt; apt install libxcursor1<br />
+  #&gt; exit</p>
 <p><strong>5) Useful website Links:</strong></p>
     <p>MolAICal is designed based on OpenJDK. We collect the websites for downloading OpenJDK:</p>
     <p>1. <a href="https://openjdk.java.net/">https://openjdk.java.net/</a><br />
